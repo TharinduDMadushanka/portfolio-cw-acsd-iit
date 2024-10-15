@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3f234381ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+
+    
+        <div class="container">
+
+            <nav>
+                <h1>TDM</h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    
+
+    <!-- about section -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="images/user3.png" alt="">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am Tharindu Dilshan Madushanka from Galle, Sri Lanka. Currently I am studying <strong>BSc (Hons) Computer Science</strong>
+                        at University Westminstre in UK. Recently I successfully completed CMJD <br> program at IJSE.
+                    </p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <!-- skills -->
+                    <div id="skills" class="tab-contents active-tab">
+                        <ul>
+                            <li><span>Backend Development</span><br>I specialize in building server-side logic, integrating databases, 
+                                and ensuring application scalability.</li>
+                            <li><span>Frontend Development</span><br>As a frontend developer, I focus on crafting intuitive and responsive
+                                 user interfaces.</li>
+                            <li><span>Problem Solving & Critical Thinking</span><br>Problem-solving is at the core of every successful 
+                                project</li>
+                        </ul>
+                    </div>
+
+                    <!-- experience -->
+                    <div id="experience" class="tab-contents">
+                        <ul>
+                            <li><span>2021 - current</span><br>Designing Web/App interfaces</li>
+                            <li><span>2019 - 2021</span><br>Web app Development</li>
+                            <li><span>2017 - 2019</span><br>Application Development</li>
+                            <li><span>2023 - 2018</span><br>Internship period</li>
+                        </ul>
+                    </div>
+
+                    <!-- education -->
+                    <div id="education" class="tab-contents">
+                        <ul>
+                            <li><span>2023 - current</span><br>Undergraduate at University of Westminster</li>
+                            <li><span>2024 March - November</span><br>Completed CMJD in IJSE</li>
+                            <li><span>2023 - 2024</span><br>Completed Dip. in Esoft</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
