@@ -158,3 +158,37 @@ nav ul li a:hover::after{
     transform: translateY(-10px);  /* move -10px in y axis */
 }
 
+/* ================ Footer ================== */
+
+#footer{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-icons{
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.footer-icons img{
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-icons img:hover{
+    transform: scale(1.1);
+    transform: translateY(-20%);
+}
+
+.copyright-text{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+}
