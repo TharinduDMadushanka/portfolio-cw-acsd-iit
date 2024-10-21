@@ -53,11 +53,11 @@ nav{
 
 }
 
-.container nav h1::first-letter{
+.container nav h1::first-letter{ /* Pseudo-elements */
     color: #ff004f;
 }
 
-nav ul li{
+nav > ul > li { /* Child combinator */
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
@@ -71,7 +71,7 @@ nav ul li a{
 }
 
 /* after hovering nav links then add underline hover img */
-nav ul li a::after{
+nav ul li a::after{  /* Pseudo elements with generated content */
     content: '';
     width: 0;  /* hide red line */ 
     height: 3px;
@@ -82,7 +82,7 @@ nav ul li a::after{
     transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements with generated content */
     width: 100%;
 }
 
@@ -153,7 +153,7 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 
-.services-list div:hover{
+.services-list div:hover{ /* User action pseudo class */
     background: #ff004f;
     transform: translateY(-10px);  /* move -10px in y axis */
 }
@@ -225,7 +225,7 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: #fff;
 }
-.sub-title:hover{
+.sub-title:hover{ /* User action pseudo class */
     opacity: .5;  /* semi-transparent */
     cursor: default;
 }
@@ -244,7 +244,8 @@ nav ul li a:hover::after{
     position: relative;
 }
 
-.tab-links::after{ /* after hover links add underline */
+/* after hover links add underline */ 
+.tab-links::after{  /* Pseudo elements with generated content */
     content: '';
     width: 0;
     height: 3px;
@@ -255,7 +256,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after{   /* Pseudo elements with generated content */
     width: 50%;
 }
 
@@ -298,8 +299,8 @@ nav ul li a:hover::after{
     
 }
 
-.work:hover{
-    box-shadow: 5px 5px hsla(0, 0%, 100%, 0.403);
+.work:hover{ /* User action pseudo class */ 
+    box-shadow: 5px 5px hsla(0, 0%, 100%, 0.403); /* CSS Shadow */
 }
 
 .work img{
@@ -348,11 +349,11 @@ nav ul li a:hover::after{
     text-align: center;
 }
 
-.work:hover img{
+.work:hover img{ /* User action pseudo class */
     transform: scale(1.1);
 }
 
-.work:hover .layer{
+.work:hover .layer{ /* User action pseudo class */
     height: 100%;      /* display thelayer over the work section */
 }
 
@@ -365,10 +366,10 @@ nav ul li a:hover::after{
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
-    transition: background 0.5s;
+    transition:  0.5s;
 }
 
-.btn:hover{
+a[target="_blank"]:hover { /* Attribute selectors */
     background: #ff004f;
 }
 
@@ -410,14 +411,9 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.social-icon a:hover{
+.social-icon a:hover{ /* User action pseudo class */
     color: #ff004f;
     transform: translateY(-5px);
-}
-
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
 }
 
 .contact-right form{
@@ -435,10 +431,15 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-
-form button[type="submit"]{
+form button[type="submit"]{ /* Attribute selectors */
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    background: #ff004f;
+    display: inline-block;
+}
+
+.btn.btn2:hover{
+    background: rgb(226, 31, 93);
 }
