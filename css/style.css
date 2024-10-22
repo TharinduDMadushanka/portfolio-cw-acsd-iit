@@ -158,6 +158,8 @@ nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements wi
     transform: translateY(-10px);  /* move -10px in y axis */
 }
 
+
+
 /* ================ Footer ================== */
 
 #footer{
@@ -177,12 +179,20 @@ nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements wi
 .footer-icons img{
     width: 30px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .footer-icons img:hover{
+    /* transform: scale(1.1);
+    transform: translateY(-20%); */
+}
+
+a[target="_blank"]{ /* Attribute selectors */
+    transition: 0.3s;
+}
+
+a[target="_blank"]:hover{ /* Attribute selectors */
     transform: scale(1.1);
-    transform: translateY(-20%);
+    transform: translateY(-20%)
 }
 
 .copyright-text{
@@ -369,7 +379,7 @@ nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements wi
     transition:  0.5s;
 }
 
-a[target="_blank"]:hover { /* Attribute selectors */
+.btn:hover{
     background: #ff004f;
 }
 
@@ -424,7 +434,6 @@ form input, form textarea{
     width: 100%;
     border: none;
     outline: none;
-    background: #262626;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
@@ -442,4 +451,18 @@ form button[type="submit"]{ /* Attribute selectors */
 
 .btn.btn2:hover{
     background: rgb(226, 31, 93);
+}
+
+/* Style the first input field */
+.contact-right form input:first-child { /* Structural selectors */
+    background: #262626;
+}
+
+.contact-right input:last-of-type { /* Structural selectors */
+    background: #262626;
+    
+}
+
+.contact-right textarea{
+    background: #262626;
 }
