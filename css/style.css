@@ -112,10 +112,19 @@ nav ul li:nth-child(5) { /* Nth pseudo class(bold the nav-link contact ) */
     margin-top: 20px;
 }
 
-.header-text h1 span{
-    color: #475459;
+.header-text #animate{  /* Animations */
+    color:  #B8D0D9;
+    position: relative;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
 }
 
+#animate {animation-timing-function: ease-in-out;} /* Animations */
+
+@keyframes mymove { /* Animations */
+    from {left: 0px;}
+    to {left: 393px;}
+}
 
 /* ================ Sevices ================== */
 
@@ -392,11 +401,11 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     border-radius: 6px; /* Rounded corners */
     text-decoration: none;
     color: #fff;
-    transition:  0.5s;
+    transition:  0.5s; /*Transition*/
 }
 
 .btn:hover{
-    /* background: #6C808C; */
+    transform: scale(1.1); /*Transform*/
     background: linear-gradient(to right, #6C808C, #B8D0D9); /*Gradient*/
 }
 
