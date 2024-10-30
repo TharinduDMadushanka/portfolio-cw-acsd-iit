@@ -542,6 +542,11 @@ form button[type="submit"]{ /* Attribute selectors */
         margin: 30px;
     }
 
+    @keyframes mymove { /* Animations */
+        from {left: 0px;}
+        to {left: 65px;}
+    }
+
     .container {
         padding: 10px 5%;
     }
