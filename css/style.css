@@ -16,6 +16,12 @@ html{
     scroll-behavior: smooth;
 }
 
+h2 + p { /* Relational selector( index.html file service cards font styles) */
+    margin-top: 0;
+    text-align:start;
+    font-size: 14px;
+}
+
 /* ================ hero ================== */
 
 #header{
@@ -334,7 +340,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     width: 100%;
     /* height: 100%; layer section show */
     height: 0; /* layer section hidden */
-    background: linear-gradient(rgba(0,0,0,0.6), #B8D0D9);
+    background: linear-gradient(rgba(0,0,0,0.6), #B8D0D9); /* Gradient */
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -381,16 +387,17 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #B8D0D9;
+    border: 1px solid #B8D0D9; /* border */
     padding: 14px 50px;
-    border-radius: 6px;
+    border-radius: 6px; /* Rounded corners */
     text-decoration: none;
     color: #fff;
     transition:  0.5s;
 }
 
 .btn:hover{
-    background: #6C808C;
+    /* background: #6C808C; */
+    background: linear-gradient(to right, #6C808C, #B8D0D9); /*Gradient*/
 }
 
 /* ================ Contact ================== */
@@ -442,14 +449,24 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 
 form input, form textarea{
     width: 100%;
-    border: none;
+    border: none; /* border */
     outline: none;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 6px; /* Rounded corners */
 }
+
+form input:valid { /* Validity pseudo class(form elements to style them based on their validation state) */
+    border-color: green; /* border */
+}
+
+form input:invalid { /* Validity pseudo class */
+    border-color: red; /* border */
+}
+
+
 form button[type="submit"]{ /* Attribute selectors */
     padding: 14px 60px;
     font-size: 18px;
@@ -468,15 +485,18 @@ form button[type="submit"]{ /* Attribute selectors */
 /* Style the first input field */
 .contact-right form input:first-child { /* Structural selectors */
     background: #262626;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .contact-right input:last-of-type { /* Structural selectors */
     background: #262626;
+    border-radius: 10px; /* Rounded corners */
     
 }
 
 .contact-right textarea{
     background: #262626;
+    border-radius: 10px; /* Rounded corners */
 }
 
 /* tablet if screen 768px or less */
