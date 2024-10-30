@@ -54,7 +54,7 @@ nav{
 }
 
 .container nav h1::first-letter{ /* Pseudo-elements */
-    color: #ff004f;
+    color: #475459;
 }
 
 nav > ul > li { /* Child combinator */
@@ -75,7 +75,7 @@ nav ul li a::after{  /* Pseudo elements with generated content */
     content: '';
     width: 0;  /* hide red line */ 
     height: 3px;
-    background: #ff004f;
+    background: #6C808C;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -84,6 +84,14 @@ nav ul li a::after{  /* Pseudo elements with generated content */
 
 nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements with generated content */
     width: 100%;
+}
+
+nav ul li:not(:last-child) { /* Negation pseudo class(add gap between nav links) */
+    margin-right: 30px; 
+}
+
+nav ul li:nth-child(5) { /* Nth pseudo class(bold the nav-link contact ) */
+    font-weight: bold;
 }
 
 .header-text{
@@ -99,7 +107,7 @@ nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements wi
 }
 
 .header-text h1 span{
-    color: #ff004f;
+    color: #475459;
 }
 
 
@@ -154,8 +162,9 @@ nav ul li a:hover::after{  /* User action pseudo class */  /* Pseudo elements wi
 }
 
 .services-list div:hover{ /* User action pseudo class */
-    background: #ff004f;
+    background: #B8D0D9;
     transform: translateY(-10px);  /* move -10px in y axis */
+    color: black;
 }
 
 
@@ -259,7 +268,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #475459;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -276,7 +285,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 }
 
 .tab-contents ul li span{
-    color: #b54769;
+    color: #B8D0D9;
     font-size: 14px;
 }
 
@@ -288,7 +297,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     display: block;
 }
 
-/* ================ My Works ================== */
+/* ================ My Works(blog) ================== */
 
 #portfolio{
     padding: 20px 0;
@@ -325,7 +334,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     width: 100%;
     /* height: 100%; layer section show */
     height: 0; /* layer section hidden */
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #B8D0D9);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -340,6 +349,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     transition: height 0.5s;     /* layer come from the work bottom */
 
 }
+
 
 .layer h3{
     font-weight: 500;
@@ -371,7 +381,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #B8D0D9;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -380,7 +390,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 }
 
 .btn:hover{
-    background: #ff004f;
+    background: #6C808C;
 }
 
 /* ================ Contact ================== */
@@ -403,7 +413,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 }
 
 .contact-left p i{
-    color: #ff004f;
+    color: #869AA6;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -422,7 +432,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 }
 
 .social-icon a:hover{ /* User action pseudo class */
-    color: #ff004f;
+    color: #B8D0D9;
     transform: translateY(-5px);
 }
 
@@ -445,12 +455,14 @@ form button[type="submit"]{ /* Attribute selectors */
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
-    background: #ff004f;
+    background: #6C808C;
     display: inline-block;
 }
 
 .btn.btn2:hover{
-    background: rgb(226, 31, 93);
+    background: #B8D0D9;
+    color: black;
+    font-weight: 500;
 }
 
 /* Style the first input field */
