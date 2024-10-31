@@ -679,4 +679,14 @@ form button[type="submit"]{ /* Attribute selectors */
         padding: 10px 40px;
         font-size: 16px;
     }
+
+    .blog .card {
+        width: 350px; /* Two cards per row on tablets */
+        margin: 20px;
+    }
+
+    .blog .card:hover{
+        transform: none;
+    }
+
 }
