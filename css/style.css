@@ -126,6 +126,13 @@ nav ul li:nth-child(5) { /* Nth pseudo class(bold the nav-link contact ) */
     to {left: 393px;}
 }
 
+.hide-nav{
+    width: 30px;
+    height: 30px;
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+}
+
 /* ================ Sevices ================== */
 
 #services{
@@ -526,7 +533,6 @@ form button[type="submit"]{ /* Attribute selectors */
     }
 
     nav ul{
-        background: #ff004f;
         position: fixed;
         top: 0;
         right: -200px; /* side nav hide */
@@ -545,6 +551,34 @@ form button[type="submit"]{ /* Attribute selectors */
     @keyframes mymove { /* Animations */
         from {left: 0px;}
         to {left: 65px;}
+    }
+
+    .hide-nav {
+        display: block; /* Show bar icon on smaller screens */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Show navigation vertically when active */
+    #sidemenu.active {
+        display: block; /* Make nav visible when .active is added */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 45%;
+        margin-top:15px;
+        border-radius: 10px;
+        background-color: hsla(196, 4%, 50%, 0.658);
+        padding-top: 20px;
+        z-index: 2;
+    }
+
+    #sidemenu li {
+        display: block; /* Stack items vertically */
+        margin: 20px;
+        text-align: center;
     }
 
     .container {

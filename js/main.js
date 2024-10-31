@@ -30,3 +30,14 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
+
+// make nav bar responsive
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hideNavBtn = document.querySelector('.hide-nav');
+    const sideMenu = document.querySelector('#sidemenu');
+
+    hideNavBtn.addEventListener('click', () => {
+        sideMenu.classList.toggle('active');
+    });
+});
