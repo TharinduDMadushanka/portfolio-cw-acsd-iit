@@ -212,10 +212,6 @@ nav ul li:nth-child(4) { /* Nth pseudo class(bold the nav-link contact ) */
     cursor: pointer;
 }
 
-.footer-icons img:hover{
-    /* transform: scale(1.1);
-    transform: translateY(-20%); */
-}
 
 a[target="_blank"]{ /* Attribute selectors */
     transition: 0.3s;
@@ -378,7 +374,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
     margin-bottom: 20px;
 }
 
-.layer a{
+.layer a[target="_blank"]{ /* attribute selctors */
     margin-top: 20px;
     color: #ff004f;
     text-decoration: none;
@@ -689,4 +685,112 @@ form button[type="submit"]{ /* Attribute selectors */
         transform: none;
     }
 
+}
+
+/* Mobile responsive for screens 576px or less */
+@media (max-width: 576px) {
+
+    /* Navbar */
+    .container nav h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .header-text {
+        font-size: 20px;
+        margin-top: 50%;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .background-image {
+        height: 60vh; /* Adjust image height for smaller screens */
+    }
+
+    /* Services Section */
+    .services-list {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .services-list div {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    /* About Section */
+    .about-col-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-links {
+        font-size: 16px;
+    }
+
+    /* Portfolio Section */
+    .work-list {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .work {
+        height: auto;
+    }
+
+    .work img {
+        height: auto;
+    }
+
+    /* Blog Section */
+    .blog .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* Contact Section */
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    form button[type="submit"] {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .btn, .btn.btn2 {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    /* Footer Icons */
+    .footer-icons {
+        gap: 20px;
+    }
+
+    .footer-icons img {
+        width: 24px;
+    }
 }
